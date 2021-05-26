@@ -33,11 +33,4 @@ class ProductTest {
         assertEquals("750 ml", Product.products.get(1).massToString());
         assertEquals("12 stuks", Product.products.get(2).massToString());
     }
-
-    @Test
-    void itShould() {
-        // Given
-        // When
-        // Then
-    }
 }

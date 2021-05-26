@@ -15,10 +15,19 @@ public class Fridge {
         this.fridgeName = fridgeName;
     }
 
-    public String addProduct(Product product) {
-        if(products.contains(product)) {
-            return "Product zit al in de koelkast";
-        }
-        return "";
+//    public boolean memberOfFridge() {
+//        for(User user: users) {
+//            if(user.geteMail().equals(Login.getInstance().getUserEmail())) {
+//                return true;
+//            }
+//        }
+//        return false;
+//    }
+
+    public boolean addProduct(Product product) {
+//        if(Login.getInstance().isAuthenticated()) {
+        return products.add(product);
+
+//        }
     }
 }

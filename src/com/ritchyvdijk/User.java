@@ -5,23 +5,30 @@ import java.util.Arrays;
 import java.util.UUID;
 
 public class User {
-    public static ArrayList<User> users = new ArrayList<>();
     private String userId;
     private String fName;
     private String lName;
     private String eMail;
     private String phonenumber;
-    private String password;
     private static ArrayList<Fridge> fridges = new ArrayList<>();
 
-    public User(String fName, String lName, String eMail, String phonenumber, String password) {
+    public User(String fName, String lName, String eMail) {
+        this.userId = UUID.randomUUID().toString();
+        this.fName = fName;
+        this.lName = lName;
+        this.eMail = eMail;
+        fridges.add(new Fridge(fName + "'s Fridge"));
+
+    }
+
+    public User(String fName, String lName, String eMail, String phonenumber) {
         this.userId = UUID.randomUUID().toString();
         this.fName = fName;
         this.lName = lName;
         this.eMail = eMail;
         this.phonenumber = phonenumber;
-        this.password = password;
         fridges.add(new Fridge(fName + "'s Fridge"));
+
     }
 
     public boolean validatePhonenumber() {
@@ -40,7 +47,11 @@ public class User {
         return eMail;
     }
 
-    public boolean isCorrectPassword(String password) {
-        return password.equals(this.password);
+    public String getfName() {
+        return fName;
+    }
+
+    public String getlName() {
+        return lName;
     }
 }
