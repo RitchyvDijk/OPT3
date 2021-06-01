@@ -15,19 +15,51 @@ public class Fridge {
         this.fridgeName = fridgeName;
     }
 
-//    public boolean memberOfFridge() {
-//        for(User user: users) {
-//            if(user.geteMail().equals(Login.getInstance().getUserEmail())) {
-//                return true;
-//            }
-//        }
-//        return false;
-//    }
+    public boolean memberOfFridge() {
+        for(User user: users) {
+            if(user.equals(IDandPasswords.getCurrentUser())) {
+                return true;
+            }
+        }
+        return false;
+    }
 
-    public boolean addProduct(Product product) {
+    public boolean addFridgeProduct(Product product) {
 //        if(Login.getInstance().isAuthenticated()) {
         return products.add(product);
 
 //        }
+    }
+
+    public String getFridgeId() {
+        return fridgeId;
+    }
+
+    public void setFridgeId(String fridgeId) {
+        this.fridgeId = fridgeId;
+    }
+
+    public String getFridgeName() {
+        return fridgeName;
+    }
+
+    public void setFridgeName(String fridgeName) {
+        this.fridgeName = fridgeName;
+    }
+
+    public static ArrayList<Product> getProducts() {
+        return products;
+    }
+
+    public static void setProducts(ArrayList<Product> products) {
+        Fridge.products = products;
+    }
+
+    public static ArrayList<User> getUsers() {
+        return users;
+    }
+
+    public static void setUsers(ArrayList<User> users) {
+        Fridge.users = users;
     }
 }

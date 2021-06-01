@@ -21,14 +21,8 @@ public class welcomeScreen {
         welcomeLabel.setFont(new Font(null, Font.PLAIN,12));
         welcomeLabel.setText("Welcome " + user.getfName() + " " + user.getlName() + "!");
 
-        JToolBar toolbar = new JToolBar();
-        toolbar.setRollover(true);
-        JButton button = new JButton("File");
-        toolbar.add(button);
-        toolbar.addSeparator();
-        toolbar.add(new JButton("Edit"));
-        toolbar.add(new JComboBox(new String[] { "Opt-1", "Opt-2", "Opt-3", "Opt-4" }));
-        frame.add(toolbar);
+
+        frame.add(welcomeLabel);
 
     }
 
