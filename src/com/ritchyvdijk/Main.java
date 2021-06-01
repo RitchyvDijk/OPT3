@@ -3,6 +3,8 @@ package com.ritchyvdijk;
 public class Main {
 
     public static void main(String[] args) {
-	    System.out.println("Hello World!");
+        IDandPasswords idandPasswords =  IDandPasswords.getInstance();
+
+        LoginScreen loginScreen = new LoginScreen(idandPasswords.getLoginInfo());
     }
 }
