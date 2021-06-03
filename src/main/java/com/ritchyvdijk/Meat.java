@@ -8,13 +8,13 @@ public class Meat extends Product{
     private ArrayList<Meat> meatProducts = new ArrayList<>();
     private String type;
     private String animal;
-    private double weigth;
+    private double weight;
 
 
-    public Meat(long barcode, String brand, String name, Date useBy, String type, double volume, String animal) {
+    public Meat(long barcode, String brand, String name, Date useBy, String type, double weight, String animal) {
         super(barcode, brand, name, useBy);
         this.type = type;
-        this.weigth = volume;
+        this.weight = weight;
         this.animal = animal;
         meatProducts.add(this);
     }
@@ -36,10 +36,11 @@ public class Meat extends Product{
     }
 
     public double getWeigth() {
-        return weigth;
+        return weight;
     }
 
-    public void setWeigth(double weigth) {
-        this.weigth = weigth;
+    public void setWeigth(double weight) {
+        this.weight = weight;
     }
+
 }

@@ -24,11 +24,8 @@ public class Fridge {
         return false;
     }
 
-    public boolean addFridgeProduct(Product product) {
-//        if(Login.getInstance().isAuthenticated()) {
+    public boolean addProduct(Product product) {
         return products.add(product);
-
-//        }
     }
 
     public String getFridgeId() {
