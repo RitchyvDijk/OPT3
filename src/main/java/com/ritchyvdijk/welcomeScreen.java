@@ -7,10 +7,9 @@ public class welcomeScreen {
 
     JFrame frame = new JFrame("Hello World!");
     JLabel welcomeLabel = new JLabel();
-    JToolBar toolBar = new JToolBar();
 
 
-    welcomeScreen(User user) {
+    public welcomeScreen(User user) {
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setSize(420,420);

@@ -20,7 +20,7 @@ public class LoginScreen implements ActionListener {
     JLabel msgLabel = new JLabel();
 
 
-    LoginScreen(HashMap<User,String> loginInfoOriginal) {
+    public LoginScreen(HashMap<User,String> loginInfoOriginal) {
         loginInfo = loginInfoOriginal;
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
