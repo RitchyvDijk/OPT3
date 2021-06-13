@@ -6,22 +6,14 @@ import java.util.UUID;
 public class Fridge {
     private String fridgeId;
     private String fridgeName;
-    private static ArrayList<Product> products = new ArrayList<>();
-    private static ArrayList<User> users = new ArrayList<>();
+    private ArrayList<Product> products = new ArrayList<>();
+    private ArrayList<User> users = new ArrayList<>();
 
 
     public Fridge(String fridgeName) {
         this.fridgeId = UUID.randomUUID().toString();
         this.fridgeName = fridgeName;
-    }
 
-    public boolean memberOfFridge() {
-        for(User user: users) {
-            if(user.equals(IDandPasswords.getCurrentUser())) {
-                return true;
-            }
-        }
-        return false;
     }
 
     public boolean addProduct(Product product) {
@@ -44,19 +36,19 @@ public class Fridge {
         this.fridgeName = fridgeName;
     }
 
-    public static ArrayList<Product> getProducts() {
+    public ArrayList<Product> getProducts() {
         return products;
     }
 
-    public static void setProducts(ArrayList<Product> products) {
-        Fridge.products = products;
-    }
+//    public void addProduct(Product product) {
+//        this.products.add(product);
+//    }
 
-    public static ArrayList<User> getUsers() {
+    public ArrayList<User> getUsers() {
         return users;
     }
 
-    public static void setUsers(ArrayList<User> users) {
-        Fridge.users = users;
+    public void addUsers(User user) {
+        this.users.add(user);
     }
 }

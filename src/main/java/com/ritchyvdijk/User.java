@@ -10,7 +10,7 @@ public class User {
     private String lName;
     private String eMail;
     private String phonenumber;
-    private static ArrayList<Fridge> fridges = new ArrayList<>();
+    private ArrayList<Fridge> fridges = new ArrayList<>();
 
     public User(String fName, String lName, String eMail) {
         this.userId = UUID.randomUUID().toString();
@@ -53,5 +53,13 @@ public class User {
 
     public String getlName() {
         return lName;
+    }
+
+    public ArrayList<Fridge> getFridges() {
+        return fridges;
+    }
+
+    public boolean addFridges(Fridge fridge) {
+        return this.fridges.add(fridge);
     }
 }
