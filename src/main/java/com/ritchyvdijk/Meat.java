@@ -1,9 +1,10 @@
 package com.ritchyvdijk;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 
-public class Meat extends Product{
+public class Meat extends Product {
 
     private ArrayList<Meat> meatProducts = new ArrayList<>();
     private String type;
@@ -11,12 +12,16 @@ public class Meat extends Product{
     private double weight;
 
 
-    public Meat(long barcode, String brand, String name, Date useBy, String type, double weight, String animal) {
-        super(barcode, brand, name, useBy);
+    public Meat(long barcode, String brand, String name, String useBy, String type, double weight, String animal) throws ParseException {
+        super(barcode, brand, name, new SimpleDateFormat("dd/MM/yyyy").parse(useBy));
         this.type = type;
         this.weight = weight;
         this.animal = animal;
         meatProducts.add(this);
+    }
+
+    public Long getBarcode() {
+        return super.getProductBarcode();
     }
 
     public String getType() {

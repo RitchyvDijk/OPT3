@@ -4,13 +4,8 @@ import java.util.HashMap;
 
 public class IDandPasswords {
     private static IDandPasswords singleton;
-    protected HashMap<User,String> loginInfo = new HashMap<>();
+    protected HashMap<User, char[]> loginInfo = new HashMap<User, char[]>();
     protected static User currentUser;
-
-    private IDandPasswords() {
-        loginInfo.put(new User("Ritchy", "van Dijk", "Test", "+3101234567"), "#1Geheim");
-        loginInfo.put(new User("Jordy", "van Dijk", "201442690@student.hhs.nl", "+3111234567"), "Test");
-    }
 
     public static IDandPasswords getInstance() {
         if(singleton == null) {
@@ -20,15 +15,16 @@ public class IDandPasswords {
         return singleton;
     }
 
+    public static void setCurrentUser(User currentUser) {
+        IDandPasswords.currentUser = currentUser;
+    }
+
     public static User getCurrentUser() {
         return currentUser;
     }
 
-    protected HashMap<User, String> getLoginInfo() {
+    protected HashMap<User, char[]> getLoginInfo() {
         return loginInfo;
     }
 
-//    protected IDandPasswords createNewLogin() {
-//
-//    }
 }

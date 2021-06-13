@@ -1,6 +1,5 @@
 package com.ritchyvdijk;
 
-import java.util.ArrayList;
 import java.util.Date;
 
 public abstract class Product {
